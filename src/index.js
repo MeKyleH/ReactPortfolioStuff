@@ -9,6 +9,7 @@ import VideoList from './components/youtube/video_list';
 import VideoDetail from './components/youtube/video_detail';
 import YTSearch from 'youtube-api-search';
 import BookList from './containers/book-list';
+import BookDetail from './containers/book-detail';
 
 const YOUTUBE_API_KEY = 'AIzaSyBDURW3R1T9q2cWT1tTIaP8dNx8ivryPxU';
 
@@ -39,6 +40,7 @@ class App extends Component {
     return (
       <div>
         <BookList />
+        <BookDetail />
         <SearchBar onSearchTermChange={videoSearch}/>
         <VideoDetail video={this.state.selectedVideo}/>
         <VideoList
