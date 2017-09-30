@@ -7,6 +7,7 @@ import VideoList from './youtube/video_list';
 import VideoDetail from './youtube/video_detail';
 import BookList from '../containers/book-list';
 import BookDetail from '../containers/book-detail';
+import WeatherSearchBar from '../containers/weather/searchbar';
 
 const YOUTUBE_API_KEY = 'AIzaSyBDURW3R1T9q2cWT1tTIaP8dNx8ivryPxU';
 
@@ -50,13 +51,18 @@ export default class App extends Component {
       </div>
     );
 
-    return (
+    const weatherDiv = (
       <div>
-        {booksDiv}
-        {youtubeDiv}
+        <WeatherSearchBar />
       </div>
     );
-    
+
+    return (
+      <div>
+        {weatherDiv}
+      </div>
+    );
+
     const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
   }
 }
