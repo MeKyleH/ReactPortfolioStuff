@@ -8,6 +8,7 @@ import VideoDetail from './youtube/video_detail';
 import BookList from '../containers/book-list';
 import BookDetail from '../containers/book-detail';
 import WeatherSearchBar from '../containers/weather/searchbar';
+import WeatherList from '../containers/weather/weather_list';
 
 const YOUTUBE_API_KEY = 'AIzaSyBDURW3R1T9q2cWT1tTIaP8dNx8ivryPxU';
 
@@ -54,6 +55,7 @@ export default class App extends Component {
     const weatherDiv = (
       <div>
         <WeatherSearchBar />
+        <WeatherList />
       </div>
     );
 
